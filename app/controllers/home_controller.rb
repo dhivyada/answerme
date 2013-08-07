@@ -1,2 +1,5 @@
 class HomeController < ApplicationController
-end
+  def post_answer
+
+  end
+ end
