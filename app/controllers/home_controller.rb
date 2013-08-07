@@ -7,4 +7,8 @@ class HomeController < ApplicationController
     push_to_client({yes: 10, no: 2})
     redirect_to questions_path
   end
+
+  def results
+
+  end
  end
