@@ -11,8 +11,8 @@
       };
 
       var pusher = new Pusher('10d324bbff6815ea189a');
-      var channel = pusher.subscribe('test_channel');
-      channel.bind('my_event', function(data) {
+      var channel = pusher.subscribe('answerme');
+      channel.bind('refresh_with_data', function(data) {
           alert(data.message);
       });
   </script>
