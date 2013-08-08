@@ -7,6 +7,9 @@ Pusher.log = function (message) {
 var pusher = new Pusher('10d324bbff6815ea189a');
 var channel = pusher.subscribe('answerme');
 channel.bind('refresh_with_data', function (data) {
+    d3.select("body").selectAll("svg").remove();
+
+    console.log(data);
     var w = 500;
     var h = 500;
     var dataset = [];
