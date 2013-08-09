@@ -1,2 +1,12 @@
-  <div class="graph"></div>
-  <%= javascript_include_tag "results/results" %>
+<%= javascript_include_tag "results/results" %>
+
+<div class="question" style="text-align:center;  padding-right:400px ">
+  <h2 style="margin-left:20%"> Are you attending the Kovai hackathon? </h2>
+</div>
+
+<div class="qr-code" style="width:400px;float:left">
+  <img style="-webkit-user-select: none" src="https://chart.googleapis.com/chart?cht=qr&&chl=http://10.16.3.148:3000/questions/1&&choe=UTF-8&&chs=200x200">
+  <br/>
+  Or goto "http://10.16.3.148:3000/questions/1"
+</div>
+<div class="graph" style="margin-left:500px;position: absolute; bottom: 0; "></div>

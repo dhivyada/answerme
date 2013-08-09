@@ -1,7 +1,9 @@
 <div class="span3" xmlns="http://www.w3.org/1999/html"></div>
 <div class="span6">
   <form class="form-horizontal" action='<% question_path(params[:id])%>' method="post">
-    <h2>Did you like open house?</h2>
+    <div class="question" style="float:left">
+      <h2>Are you attending the Kovai hackathon?</h2>
+    </div>
     <!--<div class="control-group squaredTwo">-->
         <!--<label class="radio">-->
           <!--<input type="radio" id="yes" name="yes"> Yes-->
@@ -12,8 +14,9 @@
           <!--<input type="checkbox" id="no" name="no"> No-->
         <!--</label>-->
     <!--</div>-->
-      <input type="radio" value="Yes" name="option" class="radio"> Yes </input> <br/>
-      <input type="radio" value="No" name="option" class="radio"> No </input>
+      <input type="radio" value="Yes" name="option" class="radio" checked="checked">  Yes  </input> <br/>
+      <input type="radio" value="No" name="option" class="radio"> No </input> <br/>
+      <input type="radio" value="Maybe" name="option" class="radio"> Maybe </input>
 
     <div class="control-group">
         <button type="submit" class="btn">Submit</button>
@@ -21,5 +24,4 @@
 </form>
 </div>
 <div class="span3">
-  <img style="-webkit-user-select: none" src="https://chart.googleapis.com/chart?cht=qr&&chl=http://10.16.3.148:3000/questions/1&&choe=UTF-8&&chs=200x200">
 </div>
