@@ -1,17 +1,20 @@
-<div class="span3"></div>
+<div class="span3" xmlns="http://www.w3.org/1999/html"></div>
 <div class="span6">
   <form class="form-horizontal" action='<% question_path(params[:id])%>' method="post">
     <h2>Did you like open house?</h2>
-    <div class="control-group squaredTwo">
-        <label class="checkbox">
-          <input type="checkbox" id="yes" name="yes"> Yes
-        </label>
-    </div>
-    <div class="control-group squaredTwo">
-        <label class="checkbox">
-          <input type="checkbox" id="no" name="no"> No
-        </label>
-    </div>
+    <!--<div class="control-group squaredTwo">-->
+        <!--<label class="radio">-->
+          <!--<input type="radio" id="yes" name="yes"> Yes-->
+        <!--</label>-->
+    <!--</div>-->
+    <!--<div class="control-group squaredTwo">-->
+        <!--<label class="checkbox">-->
+          <!--<input type="checkbox" id="no" name="no"> No-->
+        <!--</label>-->
+    <!--</div>-->
+      <input type="radio" value="Yes" name="option" class="radio"> Yes </input> <br/>
+      <input type="radio" value="No" name="option" class="radio"> No </input>
+
     <div class="control-group">
         <button type="submit" class="btn">Submit</button>
     </div>

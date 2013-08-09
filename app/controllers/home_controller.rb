@@ -12,10 +12,10 @@ class HomeController < ApplicationController
     end
 
     option_count= @@question_result[params[:id]]
-    if !option_count.has_key?(params.to_a[0][0])
-      option_count[params.to_a[0][0]] = 1;
+    if !option_count.has_key?(params["option"])
+      option_count[params["option"]] = 1;
     else
-      option_count[params.to_a[0][0]] +=1;
+      option_count[params["option"]] +=1;
     end
 
     @@question_result[params[:id]] = option_count

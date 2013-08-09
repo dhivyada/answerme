@@ -11,7 +11,7 @@ channel.bind('refresh_with_data', function (data) {
         d3.select("body").selectAll("svg").remove();
         console.log(data.message);
         var w = 500;
-        var h = 500;
+        var h = 650;
         var dataset = [];
         for (var attr in data.message) {
             dataset.push([attr, data.message[attr]]);
@@ -19,7 +19,8 @@ channel.bind('refresh_with_data', function (data) {
         var svg = d3.select("body")
             .append("svg")
             .attr("width", w)
-            .attr("height", h);
+            .attr("height", h)
+            .attr("style","margin-left:750px");
         svg.selectAll("rect")
             .data(dataset)
             .enter()
@@ -43,6 +44,7 @@ channel.bind('refresh_with_data', function (data) {
             .enter();
 
         texts.append("text")
+            .attr("class","option")
             .text(function (d) {
                 return d[0];
             })
@@ -50,9 +52,10 @@ channel.bind('refresh_with_data', function (data) {
                 return i * 54 + 25;
             })
             .attr("y", function (d, i) {
-                return h - 5;
+                return h - 2;
             })
-            .attr("text-anchor", "middle");
+            .attr("text-anchor", "middle")
+            .attr("fill","white");
 
         texts.append("text")
             .text(function (d) {
