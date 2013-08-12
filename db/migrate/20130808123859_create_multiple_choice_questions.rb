@@ -3,9 +3,10 @@ class CreateMultipleChoiceQuestions < ActiveRecord::Migration
     create_table :multiple_choice_questions do |t|
       t.integer :id
       t.string :question
-      serialize :options
+      t.text :options
+      t.text :answers
 
-      t.timestamps
+      t.timestamp
     end
   end
 end
