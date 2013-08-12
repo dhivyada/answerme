@@ -1,19 +1,10 @@
 <div class="span3" xmlns="http://www.w3.org/1999/html"></div>
 <div class="span6">
-  <form class="form-horizontal" action='<% question_path(params[:id])%>' method="post">
+  <%= post_answer_question_path(1) %>
+  <form class="form-horizontal" action='<%= post_answer_question_path(params[:id])%>' method="post">
     <div class="question" style="float:left">
       <h2>Are you attending the Kovai hackathon?</h2>
     </div>
-    <!--<div class="control-group squaredTwo">-->
-        <!--<label class="radio">-->
-          <!--<input type="radio" id="yes" name="yes"> Yes-->
-        <!--</label>-->
-    <!--</div>-->
-    <!--<div class="control-group squaredTwo">-->
-        <!--<label class="checkbox">-->
-          <!--<input type="checkbox" id="no" name="no"> No-->
-        <!--</label>-->
-    <!--</div>-->
       <input type="radio" value="Yes" name="option" class="radio" checked="checked">  Yes  </input> <br/>
       <input type="radio" value="No" name="option" class="radio"> No </input> <br/>
       <input type="radio" value="Maybe" name="option" class="radio"> Maybe </input>

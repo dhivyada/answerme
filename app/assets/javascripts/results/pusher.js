@@ -9,7 +9,7 @@ var channel = pusher.subscribe('answerme');
 channel.bind('refresh_with_data', function (data) {
     var w = 500;
     var h = 600;
-    if(window.location.pathname == "/results/"+ data.id) {
+    if(window.location.pathname == "/questions/"+ data.id + "/results") {
         d3.select("body").selectAll(".graph").selectAll("svg").remove();
         console.log(data.message);
 
@@ -21,7 +21,6 @@ channel.bind('refresh_with_data', function (data) {
         }
         console.log(dataset);
 
-//        debugger;
         var y = d3.scale.linear()
             .domain([1, d3.max(count_array)])
             .range(["10px", "550px"]);

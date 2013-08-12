@@ -1,12 +1,8 @@
 class HomeController < ApplicationController
 
   @@question_result=Hash.new
-  def index
-  end
-
 
   def post_answer
-
     if !@@question_result.has_key?(params[:id])
         @@question_result[params[:id]] = Hash.new
     end

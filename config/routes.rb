@@ -1,5 +1,8 @@
 Answerme::Application.routes.draw do
-  get '/questions/:id', to: 'Home#index' , :as => 'question'
-  post '/questions/:id', to: 'Home#post_answer'
-  get '/results/:id', to: 'Home#results'
+  resources :questions, controller: :home do
+    member do
+      get :results
+      post :post_answer
+    end
+  end
 end
