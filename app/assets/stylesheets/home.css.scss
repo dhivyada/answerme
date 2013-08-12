@@ -8,8 +8,17 @@
 .radio {
   height:35px;
 
+
+}
+
+label {
+  font-size:  0.95em;
+}
+input[type="radio"]
+  {
+  clear:none; margin: 2px 0 0 2px;
 }
 
 body {
-  font-size: 1em;
+  font-size: 1.2em;
 }
