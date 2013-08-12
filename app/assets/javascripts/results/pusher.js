@@ -11,13 +11,12 @@ channel.bind('refresh_with_data', function (data) {
     var h = 600;
     if(window.location.pathname == "/questions/"+ data.id + "/results") {
         d3.select("body").selectAll(".graph").selectAll("svg").remove();
-        console.log(data.message);
 
         var dataset = [];
         var count_array=[];
-        for (var attr in data.message) {
-            dataset.push({option:attr, count: data.message[attr]});
-            count_array.push(data.message[attr])
+        for (var attr in data.answers) {
+            dataset.push({option:attr, count: data.answers[attr]});
+            count_array.push(data.answers[attr])
         }
         console.log(dataset);
 
