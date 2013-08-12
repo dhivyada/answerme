@@ -1,15 +1,21 @@
 <div class="span3" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html"></div>
+<% if params[:message] %>
+<div class="alert-message warning">
+  <a class="close" href="#">×</a>
+  <p><strong> <%= params[:message] %> </strong></p>
+</div>
+    <% end %>
 <div class="span6">
   <form class="form-horizontal" action='<%= post_answer_question_path(@question.id)%>' method="post">
     <div class="question" style="float:left">
       <h2><%= @question.question%></h2>
     </div>
-    <% @question.options.each do |option| %>
-      <label><input type="radio" value="<%= option %>" id="<%= option %>" name="option" class="radio"> <%= option%> </input> </label>
-    <% end %>
+
+      <label><input type="radio" value="<%= @question.options[0] %>" id="<%= @question.options[0] %>" name="option" class="radio" checked="checked"> <%= @question.options[0]%> </input> </label>
+      <label><input type="radio" value="<%= @question.options[1] %>" id="<%= @question.options[1] %>" name="option" class="radio"> <%= @question.options[1]%> </input> </label>
 
     <div class="control-group">
-        <button type="submit" class="btn">Submit</button>
+        <button type="submit" class="btn" onsubmit="return alert('Response submitted successfully!!')">Submit</button>
     </div>
 </form>
 </div>

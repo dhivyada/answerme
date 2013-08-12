@@ -10,7 +10,7 @@ class HomeController < ApplicationController
     @multiple_choice_question.answers[params[:option]] += 1
     @multiple_choice_question.save!
     push_to_client(@multiple_choice_question.to_json)
-    redirect_to question_path(params[:id])
+    redirect_to question_path(params[:id], message:"Hurray! Response submitted!!")
   end
 
   def results
