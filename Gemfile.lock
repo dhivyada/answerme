@@ -57,7 +57,7 @@ GEM
       treetop (~> 1.4.8)
     mime-types (1.23)
     multi_json (1.7.8)
-    mysql2 (0.3.13)
+    pg (0.16.0)
     polyglot (0.3.3)
     pusher (0.12.0)
       httpclient (~> 2.3.0)
@@ -125,7 +125,7 @@ PLATFORMS
 
 DEPENDENCIES
   jquery-rails
-  mysql2
+  pg
   pusher
   rails (= 3.2.13)
   rspec-rails
