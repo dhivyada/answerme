@@ -12,4 +12,8 @@ class HomeController < ApplicationController
     push_to_client(@multiple_choice_question.to_json)
     redirect_to question_path(params[:id])
   end
+
+  def results
+    @question = MultipleChoiceQuestion.find(params[:id])
+  end
 end
