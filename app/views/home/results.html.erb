@@ -1,5 +1,7 @@
+<script type="text/javascript">
+    var event_name = "refresh_data_<%= @question.id%>"
+</script>
 <%= javascript_include_tag "results/results" %>
-
 <div class="question" style="text-align:center; width: 1200px">
   <h2 style="margin-left:20%"> <%= @question.question %> </h2>
 </div>
