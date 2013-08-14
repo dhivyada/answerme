@@ -10,9 +10,9 @@
     <div class="question" style="float:left">
       <h2><%= @question.question%></h2>
     </div>
-
-      <label><input type="radio" value="<%= @question.options[0] %>" id="<%= @question.options[0] %>" name="option" class="radio" checked="checked"> <%= @question.options[0]%> </input> </label>
-      <label><input type="radio" value="<%= @question.options[1] %>" id="<%= @question.options[1] %>" name="option" class="radio"> <%= @question.options[1]%> </input> </label>
+      <% @question.options.each do |option| %>
+      <label><input type="radio" value="<%= option %>" id="<%= option %>" name="option" class="radio" checked="checked"> <%= option%> </input> </label>
+        <% end %>
 
     <div class="control-group">
         <button type="submit" class="btn" onsubmit="return alert('Response submitted successfully!!')">Submit</button>

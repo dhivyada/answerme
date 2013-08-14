@@ -1,0 +1,22 @@
+<form class="form-horizontal" action="/questions" method="post">
+  <div class="control-group">
+    <label class="control-label" for="inputEmail">Question</label>
+
+    <div class="controls">
+      <textarea id="inputEmail" placeholder="Question" name="question"></textarea>
+    </div>
+  </div>
+  <div class="control-group">
+    <label class="control-label" for="inputPassword">Options</label>
+
+    <div class="controls options">
+        <input type="text" placeholder="Option" name="options[]">
+        <span class="btn add-option"><i class="icon-plus"></i></span>
+    </div>
+  </div>
+  <div class="control-group">
+    <div class="controls">
+      <button type="submit" class="btn">Submit</button>
+    </div>
+  </div>
+</form>

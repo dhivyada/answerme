@@ -1,4 +1,14 @@
 class HomeController < ApplicationController
+  def new
+
+  end
+
+  def create
+    question, options = params[:question], params[:options]
+    @multiple_choice_question = MultipleChoiceQuestion.create(question: question, options: options, answers: {})
+    render json: @multiple_choice_question
+  end
+
   def show
     @question = MultipleChoiceQuestion.find(params[:id])
   end

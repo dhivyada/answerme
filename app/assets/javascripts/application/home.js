@@ -1,2 +1,6 @@
-// Place all the behaviors and hooks related to the matching controller here.
-// All this logic will automatically be available in application.js.
+$(function () {
+    $(".btn.add-option").click(function () {
+        var input_element = "<input type='text' name='options[]' placeholder='Option'></input>";
+        $(input_element).insertBefore($('.options > :last-child')[0]);
+    });
+});
