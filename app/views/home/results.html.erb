@@ -1,7 +1,10 @@
 <script type="text/javascript">
-    var event_name = "refresh_data_<%= @question.id%>"
+    var event_name = "refresh_data_<%= @question.id%>";
+    var dataset = [];
+    <% @question.answers.each do |key, value| %>
+      dataset.push({option: "<%= key %>", count: <%= value %>});
+    <% end %>
 </script>
-<%= javascript_include_tag "results/results" %>
 <div class="question" style="text-align:center; width: 1200px">
   <h2 style="margin-left:20%"> <%= @question.question %> </h2>
 </div>
@@ -12,3 +15,4 @@
   Or goto "http://frozen-dawn-1300.herokuapp.com/questions/1"
 </div>
 <div class="graph" style="margin-left:500px;position: absolute; bottom: 0; "></div>
+<%= javascript_include_tag "results/results" %>
