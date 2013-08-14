@@ -1,0 +1,5 @@
+<% MultipleChoiceQuestion.all.each do |question| %>
+    <%= link_to question.question, question_path(question) %>
+<% end %>
+
+<%= link_to

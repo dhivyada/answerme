@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require html_canvas
 //= require_tree .
 
 
