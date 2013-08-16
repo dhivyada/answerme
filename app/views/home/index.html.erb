@@ -7,7 +7,7 @@
   <% MultipleChoiceQuestion.all.each do |question| %>
       <div class="row-fluid question-row">
         <div class="span6">
-          <%= link_to question.question, question_path(question) %>
+          <%= link_to question.question, results_question_path(question) %>
         </div>
         <div class="span4">
           <% question.answers.each do |key, value| %>
