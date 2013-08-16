@@ -6,7 +6,7 @@ class HomeController < ApplicationController
   def create
     question, options = params[:question], params[:options]
     @multiple_choice_question = MultipleChoiceQuestion.create(question: question, options: options, answers: {})
-    render json: @multiple_choice_question
+    redirect_to questions_path
   end
 
   def show
@@ -25,5 +25,10 @@ class HomeController < ApplicationController
 
   def results
     @question = MultipleChoiceQuestion.find(params[:id])
+  end
+
+  def destroy
+    MultipleChoiceQuestion.find(params[:id]).destroy
+    redirect_to questions_path
   end
 end
