@@ -7,7 +7,7 @@
     <% end %>
 <div class="span6">
   <form class="form-horizontal" action='<%= post_answer_question_path(@question.id)%>' method="post">
-    <div class="question" style="float:left">
+    <div class="question">
       <h2><%= @question.question%></h2>
     </div>
       <% @question.options.each do |option| %>
