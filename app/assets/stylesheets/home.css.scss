@@ -22,3 +22,11 @@ input[type="radio"]
 body {
   font-size: 1.2em;
 }
+
+.question-row {
+  padding: 18px;
+}
+
+.question-row:nth-child(odd){
+  background-color: #E1E1E8;
+}
